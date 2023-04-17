@@ -90,7 +90,7 @@ export const bitskiWallet = ({
       typeof window.ethereum !== "undefined" &&
       ((window.ethereum as any).isBitski === true ||
         !!window.ethereum.providers?.find((p: any) => p.isBitski === true))),
-  iconUrl: async () => (await import("./bitskiWallet.svg")).default,
+  iconUrl: "https://cdn.bitskistatic.com/docs-web/bitskiWallet.svg",
   iconBackground: "#fff",
   downloadUrls: {
     browserExtension:

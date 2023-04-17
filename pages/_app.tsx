@@ -3,7 +3,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 import { connectorsForWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import type { AppProps } from 'next/app';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { arbitrum, goerli, mainnet, optimism, polygon } from 'wagmi/chains';
+import { arbitrum, mainnet, optimism, polygon } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { 
   injectedWallet,
@@ -22,12 +22,20 @@ const { chains, provider, webSocketProvider } = configureChains(
     polygon,
     optimism,
     arbitrum,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli] : []),
   ],
   [publicProvider()]
 );
 
-const bitski = new Bitski('1812bcfa-44ab-48e3-87b2-b06de6c8e89d', '/callback.html');
+/*
+ * Replace the clientId and callbackUrl with your own.
+ * You can get credential info by creating an account at https://developer.bitski.com.
+ */
+const bitski = new Bitski(
+  // REPLACE WITH YOUR OWN CLIENT ID
+  '1812bcfa-44ab-48e3-87b2-b06de6c8e89d',
+  // REPLACE WITH YOUR OWN CALLBACK URL
+  'https://mc38oz-3000.csb.app/callback.html'
+);
 
 const connectors = connectorsForWallets([
   {
