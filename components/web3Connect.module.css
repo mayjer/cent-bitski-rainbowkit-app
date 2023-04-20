@@ -1,0 +1,263 @@
+.connectDiv
+{
+  justify-content: center !important;
+  width: 100%;
+}
+
+.connectContainer {
+  text-align: right;
+} 
+
+.infoContainer {
+  margin: auto;
+  margin-top: 40px;
+  background-color: #88FCB3;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  width: fit-content;
+  padding: 10px 25px;
+}
+
+.connectBtn
+{
+  
+  margin: auto;
+  padding: 8px 25px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  white-space: nowrap;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-radius: 10px;
+  border: solid 1px rgb(0 0 0 / 20%);
+}
+
+.blackBtn {
+  background-color: black !important;
+  color:white !important;
+}
+
+.connectTxt
+{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+}
+
+.wrongNetwork
+{
+  width: 236px;
+  padding: 10px 20px;
+  background-color: #fc3b3b;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.Columncontainer
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.header3
+{
+  color: #fff;
+  margin-top: 20px;
+}
+
+.header3:hover
+{
+  color: #ef86e7;
+  cursor: pointer;
+}
+
+.leftAlign
+{
+  text-align: left;
+  color: #fff;
+}
+
+.text
+{
+  color: #fff;
+  margin-top: 10px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.text:hover
+{
+  color: #86fdb0;
+  cursor: pointer;
+}
+
+.avatar {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border: solid 1px #D0D0D0;
+  border-radius: 50%;
+}
+
+
+/* DropDown */
+
+.avatar {
+  border-radius: 50%;
+  border: 2px solid #D0D0D0;
+  transition-duration: 0.3s;
+}
+
+.dropDownMenu {
+  background-color: #fff;
+  padding: 10px 15px 10px 15px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.10) 0px 34px 35px, rgba(0, 0, 0, 0.12) 0px -3px 20px, rgba(0, 0, 0, 0.12) 0px 2px 4px, rgba(0, 0, 0, 0.17) 0px 8px 9px,
+      rgba(0, 0, 0, 0.09) 0px -1px 3px;
+  width: 257px;
+  position: absolute !important;
+  left: -145px;
+  z-index: 9999;
+}
+
+.RowDrop {
+  transition: 0.5s;
+  margin-top: 15px !important;
+  flex-wrap: nowrap !important;
+  gap: 8px;
+}
+
+.RowDrop:hover {
+  transform: scale(1.1);
+}
+
+.DropText {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #767676;
+}
+
+.DropText:hover {
+  color: #000;
+}
+
+.SignOutDivider {
+  border-top: 2px solid #D0D0D0;
+}
+
+.AdressProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.AdressBox {
+  background-color: #fafafa;
+  padding: 12px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.AdressBox h1 {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.AdressBox p {
+  color: rgb(189, 189, 189);
+  margin: 0px;
+}
+
+.closedContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  
+}
+
+@media only screen and (max-width: 768px)
+{
+  .leftAlign
+  {
+    text-align: center;
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width:575px) {
+  .dropDownMenu {
+    left: -288px;
+    top: 8px;
+    right: 0;
+    width: 297% !important;
+  }
+
+  .AdressBox {
+    width: 311px;
+  }
+}
+
+@media only screen and (max-width:545px) {
+  .dropDownMenu {
+    left: -237px;
+    right: 0;
+    width: 261% !important;
+  }
+
+  .AdressBox {
+    width: 256px;
+  }
+
+}
+
+
+@media only screen and (max-width:460px) {
+  .dropDownMenu {
+    left: -211px !important;
+    width: 261% !important;
+  }
+
+  .connectDiv {
+    margin: auto !important;
+  }
+
+  .connectContainer {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width:435px) {
+  .dropDownMenu {
+    left: -179px !important;
+    width: 235% !important;
+  }
+
+  .AdressBox {
+    width: 210px;
+  }
+
+}
+
+@media only screen and (max-width:400px) {
+  .dropDownMenu {
+    left: -150px !important;
+    width: 216% !important;
+  }
+
+  .AdressBox {
+    width: 172px;
+  }
+
+}

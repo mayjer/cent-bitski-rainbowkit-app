@@ -32,9 +32,9 @@ const { chains, provider, webSocketProvider } = configureChains(
  */
 const bitski = new Bitski(
   // REPLACE WITH YOUR OWN CLIENT ID
-  '1812bcfa-44ab-48e3-87b2-b06de6c8e89d',
+  process.env.NEXT_PUBLIC_BITSKI_ID as string,
   // REPLACE WITH YOUR OWN CALLBACK URL
-  'https://mc38oz-3000.csb.app/callback.html'
+  process.env.NEXT_PUBLIC_BITSKI_CALLBACK_URL as string
 );
 
 const connectors = connectorsForWallets([

@@ -63,8 +63,13 @@ class BitskiConnector extends InjectedConnector {
   async connect({ chainId }: { chainId?: number } = {}) {
     this.injectProvider();
 
+    console.log("BitskiConnector::connect:: signing in...")
     const user = await this.bitski?.signIn();
+    console.log("BitskiConnector::connect", { user })
+
+    console.log("BitskiConnector::connect:: super.connect...")
     const result = await super.connect({ chainId });
+    console.log("BitskiConnector::connect", { result });
     return result;
   }
 
@@ -73,7 +78,8 @@ class BitskiConnector extends InjectedConnector {
 
     await super.disconnect();
     await this.bitski?.signOut();
-    await this.bitski?.getAuthStatus();
+    const status = await this.bitski?.getAuthStatus();
+    console.log("BitskiConnector::disconnect", status);
   }
 }
 
